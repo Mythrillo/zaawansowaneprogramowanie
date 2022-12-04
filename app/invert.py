@@ -1,8 +1,10 @@
-from PIL import Image, ImageOps
 import io
+from typing import Union
+
+from PIL import Image, ImageOps
 
 
-def invert(picture: bytes, content_type: str) -> bytes | None:
+def invert(picture: bytes, content_type: str) -> Union[bytes, None]:
     picture = Image.open(io.BytesIO(picture))
     picture_size = _get_picture_size(picture)
     if picture_size > 12 * 10**6:

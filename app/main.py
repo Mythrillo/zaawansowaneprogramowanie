@@ -1,7 +1,6 @@
-from fastapi import FastAPI
-from api import api_router
 import settings  # noqa: F401
-
+from api import api_router
+from fastapi import FastAPI
 
 app = FastAPI(
     title="Zaawansowane Programowanie 2022/2023",

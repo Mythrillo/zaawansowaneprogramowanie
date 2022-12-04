@@ -1,10 +1,10 @@
-from fastapi import APIRouter, Path, UploadFile, Response, HTTPException
-from schemas import PrimeResponse, TimeResponse, APIKeyResponse
-from prime import deterministic_miller_rabin_primality_test
-from invert import invert
 from datetime import datetime
-import settings
 
+import settings
+from fastapi import APIRouter, HTTPException, Path, Response, UploadFile
+from invert import invert
+from prime import deterministic_miller_rabin_primality_test
+from schemas import APIKeyResponse, PrimeResponse, TimeResponse
 
 api_router = APIRouter()
 
